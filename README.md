@@ -54,12 +54,14 @@ Erlang/OTP 20 [erts-9.3.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-thread
 loading cache backup
 Interactive Elixir (1.6.5) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)> {:error, :unreachable_file}
-iex(1)> CachexSample.Worker.load
+iex(1)> Cachex.size(:my_cache)
+{:ok, 0}
+iex(2)> CachexSample.Worker.load
 :load_cache_backup
 loading cache backup
-iex(2)> {:ok, true}
-iex(2)> CachexSample.Worker.get(:a)
+iex(3)> {:ok, true}
+iex(3)> CachexSample.Worker.get(:a)
 1
-iex(3)> Cachex.size(:my_cache)
+iex(4)> Cachex.size(:my_cache)
 {:ok, 2}
 ```
